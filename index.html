@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng Trắc nghiệm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="logo-container">
+                <div class="icon-brain">🧠</div>
+            </div>
+            <h1>Thử Thách Kiến Thức</h1>
+            <p>Kiểm tra sự hiểu biết của bạn với các câu hỏi trắc nghiệm thú vị.</p>
+            
+            <div class="user-info-form">
+                <div class="input-group">
+                    <label for="student-name">Họ và tên</label>
+                    <input type="text" id="student-name" placeholder="Nhập họ và tên của bạn..." autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="student-class">Lớp</label>
+                    <input type="text" id="student-class" placeholder="VD: 10A1..." autocomplete="off">
+                </div>
+                <div id="form-error" class="error-message hidden">Vui lòng điền đầy đủ Họ tên và Lớp!</div>
+            </div>
+
+            <button id="start-btn" class="btn primary-btn">Bắt Đầu Ngay</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="quiz-info">
+                    <span id="question-count">Câu 1/10</span>
+                    <span id="score-display">Điểm: 0</span>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <h2 id="question-text">Đang tải câu hỏi...</h2>
+            </div>
+
+            <div id="options-container" class="options-container">
+                <!-- Options will be dynamically inserted here -->
+            </div>
+            
+            <div class="quiz-footer">
+                <button id="next-btn" class="btn secondary-btn hidden">Câu Tiếp Theo <span class="arrow">→</span></button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="result-icon">🏆</div>
+            <h2>Hoàn Thành!</h2>
+            <p class="score-text">Bạn đã trả lời đúng <span id="final-score" class="highlight">0</span> trên <span id="total-questions" class="highlight">0</span> câu hỏi.</p>
+            <div class="feedback-message" id="feedback-message">Tuyệt vời!</div>
+            <button id="restart-btn" class="btn primary-btn">Chơi Lại</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
