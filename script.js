@@ -31,7 +31,7 @@ const quizData = [
         correct: 2
     },
     {
-        question: "Câu 7. Ví dụ nào là đối lưu?",
+        question: "Câu 7. Ví dụ nào là hiện tượng đối lưu?",
         options: ["Thanh sắt nóng dần", "Nước trong nồi sôi chuyển động", "Ánh sáng truyền từ Mặt Trời", "Cốc nước lạnh đặt ngoài không khí"],
         correct: 1
     },
@@ -46,8 +46,8 @@ const quizData = [
         correct: 3
     },
     {
-        question: "Câu 10. Trong các hình thức truyền nhiệt, hình thức nào không cần môi trường truyền?",
-        options: ["Dẫn nhiệt", "Đối lưu", "Bức xạ nhiệt", "Cả 3 đều cần môi trường"],
+        question: "Câu 10. Bức xạ nhiệt là",
+        options: ["sự truyền nhiệt qua chất rắn.", "sự truyền nhiệt qua không khí.", "sự truyền nhiệt bằng các tia nhiệt đi thẳng.", "sự truyền nhiệt bằng các tia nhiệt đi theo đường gấp khúc."],
         correct: 2
     },
     {
@@ -56,7 +56,7 @@ const quizData = [
         correct: 2
     },
     {
-        question: "Câu 12. Khi đun nước, phần nước dưới nóng lên trước rồi chuyển động lên trên. Đây là do",
+        question: "Câu 12. Khi đun nước, phần nước phía dưới nóng lên trước rồi chuyển động lên trên. Đây là do",
         options: ["Dẫn nhiệt", "Đối lưu", "Bức xạ", "Bay hơi"],
         correct: 1
     },
@@ -76,9 +76,9 @@ const quizData = [
         correct: 1
     },
     {
-        question: "Câu 16. Một bạn đặt tay gần bếp lửa (không chạm vào). Tay bạn nóng lên chủ yếu do",
-        options: ["Dẫn nhiệt", "Đối lưu", "Bức xạ nhiệt", "Bay hơi"],
-        correct: 2
+        question: "Câu 16. Đứng gần một bếp lửa, ta cảm thấy nóng. Nhiệt lượng truyền từ ngọn lửa đến người bằng cách nào?",
+        options: ["Sự đối lưu.", "Sự dẫn nhiệt của không khí.", "Sự bức xạ nhiệt.", "Chủ yếu là bức xạ nhiệt, một phần do dẫn nhiệt."],
+        correct: 3
     },
     {
         question: "Câu 17. Tại sao trong phòng điều hòa, máy lạnh thường đặt trên cao?",
@@ -86,18 +86,18 @@ const quizData = [
         correct: 1
     },
     {
-        question: "Câu 18. Khi đun nước trong ấm, hiện tượng nào xảy ra đồng thời?",
-        options: ["Chỉ dẫn nhiệt", "Chỉ đối lưu", "Chỉ bức xạ", "Cả dẫn nhiệt, đối lưu và bức xạ"],
+        question: "Câu 18. Khi đun nước trong ấm, có những hình thức truyền nhiệt nào xảy ra?",
+        options: ["Chỉ có dẫn nhiệt", "Chỉ có đối lưu", "Chỉ có bức xạ nhiệt", "Cả dẫn nhiệt, đối lưu và bức xạ nhiệt"],
         correct: 3
     },
     {
-        question: "Câu 19. Tại sao người ta thường lót rơm hoặc xốp quanh thùng đá?",
+        question: "Câu 19. Tại sao người ta thường lót bông hoặc xốp quanh thùng đá?",
         options: ["Để tăng dẫn nhiệt", "Để tăng đối lưu", "Để giảm truyền nhiệt", "Để làm đẹp"],
         correct: 2
     },
     {
-        question: "Câu 20. Một bình nước nóng được giữ nhiệt tốt nhờ",
-        options: ["Tăng đối lưu", "Giảm dẫn nhiệt, đối lưu và bức xạ", "Tăng bức xạ", "Chỉ giảm dẫn nhiệt"],
+        question: "Câu 20. Cách sắp xếp vật liệu dẫn nhiệt từ tốt hơn đến kém hơn nào dưới đây đúng?",
+        options: ["Nhôm, không khí, nước.", "Nhôm, nước, không khí.", "Không khí, nhôm, nước.", "Không khí, nước, nhôm."],
         correct: 1
     }
 ];
