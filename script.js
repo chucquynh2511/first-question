@@ -106,6 +106,15 @@ const quizData = [
 let currentQuestionIndex = 0;
 let score = 0;
 let hasAnswered = false;
+let userIP = "Không xác định";
+
+// Tự động lấy IP người dùng ngay khi trang được tải
+fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+        userIP = data.ip;
+    })
+    .catch(error => console.log("Lỗi lấy IP:", error));
 
 // DOM Elements
 const studentNameInput = document.getElementById('student-name');
@@ -282,8 +291,7 @@ function sendDataToGoogleSheets(name, className, score, total) {
     }
 
     // Sử dụng fetch với mode no-cors để tránh lỗi CORS khi gửi từ trình duyệt
-    const url = `${GOOGLE_SCRIPT_URL}?name=${encodeURIComponent(name)}&class=${encodeURIComponent(className)}&score=${score}&total=${total}`;
-
+    const url = `${GOOGLE_SCRIPT_URL}?name=${encodeURIComponent(name)}&class=${encodeURIComponent(className)}&score=${score}&total=${total}&ip=${encodeURIComponent(userIP)}`;
     fetch(url, {
         method: 'GET',
         mode: 'no-cors'
