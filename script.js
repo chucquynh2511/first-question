@@ -108,13 +108,31 @@ let score = 0;
 let hasAnswered = false;
 let userIP = "Không xác định";
 
-// Tự động lấy IP người dùng ngay khi trang được tải
-fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => {
+// Tự động lấy IP bằng nhiều nguồn dự phòng
+async function fetchIP() {
+    try {
+        let response = await fetch('https://api.ipify.org?format=json');
+        let data = await response.json();
         userIP = data.ip;
-    })
-    .catch(error => console.log("Lỗi lấy IP:", error));
+    } catch (e) {
+        try {
+            // Nguồn dự phòng 1
+            let response = await fetch('https://jsonip.com/');
+            let data = await response.json();
+            userIP = data.ip;
+        } catch (e2) {
+            try {
+                // Nguồn dự phòng 2
+                let response = await fetch('https://api.seeip.org/jsonip?');
+                let data = await response.json();
+                userIP = data.ip;
+            } catch (e3) {
+                console.log("Hoàn toàn không thể lấy IP:", e3);
+            }
+        }
+    }
+}
+fetchIP();
 
 // DOM Elements
 const studentNameInput = document.getElementById('student-name');
